@@ -3,9 +3,9 @@ class Item:
     This class contains items details
     """
 
-    pass
+    def calculate_total_price(self) -> None:
+        print("tested")
 
 
-obj = Item()
-obj.name = "Dikshant"
-print(obj.name)
+item1 = Item()
+item1.calculate_total_price()
