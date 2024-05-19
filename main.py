@@ -1,14 +1,14 @@
 class Item:
     """
     This class contains items details
-    """ 
+    """
     pay_rate = 10
 
-    def __init__(self,name,price,quantity):
+    def __init__(self, name, price, quantity):
         self.name = name
         self.price = price
         self.quantity = quantity
-        self.total = 0 
+        self.total = 0
 
     def calculate_total_price(self):
         self.total = self.price * self.quantity
@@ -21,5 +21,7 @@ class Item:
         return f"Item('{self.name}','{self.price}','{self.quantity}')"
 
 
-item1 = Item()
-item1.calculate_total_price()
+item1 = Item(name="dikshant", price=10, quantity=2)
+
+print(item1.__dict__)
+print(Item.__dict__["__module__"])
