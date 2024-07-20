@@ -1,8 +1,10 @@
 class Enemy:
-    type_of_enemy: str
-    health_points: int = 10
-    attack_damage: int = 1
 
+    def __init__(self, type_of_enemy: str, health_points: int = 10 , attack_damage: int = 1) -> None:
+        self.type_of_enemy = type_of_enemy
+        self.health_points = health_points
+        self.attack_damage = attack_damage
+        
 
     def talk(self):
         print(f"I am a {self.type_of_enemy}. Be prepared to fight!")
@@ -15,8 +17,7 @@ class Enemy:
 
 
 if __name__ == "__main__":
-    enemy = Enemy()
-    enemy.type_of_enemy = "Zoombie"
+    enemy = Enemy("Zoombie")
     enemy.talk()
     enemy.walk_farward()
     enemy.attack()
